@@ -12,31 +12,36 @@
 <body class="flex justify-center h-screen  items-center ">
     <div class=" border-solid border-4 border-black w-4/12 h-1/2  flex flex-col items-center  ">
         <h2 class="text-3xl  text-center w-full m-5 ">PASSWORD genrator</h2>
-        <button type="submit" id="btn" class="border-2 bg-blue-500 text-center w-fit p-5 rounded-md m-5"> click
-            here</button>
-        <input type="text" id="pass" value="" class="border-2 bg-gray-400 text-center w-fit p-5 rounded-md ">
-        <div class="flex flex-col">
-            <div  class="flex justify-between"> 
-                <label for="length">length</label>
-                <input type="number" name="" id="length"  class="bg-gray-300 w-1/3">
+        <form action="" method="get">
+            <input type="button" value="click here" id="button"
+                class="border-2 bg-blue-500 text-center w-fit p-5 rounded-md m-5">
+            <input type="text" id="pass" value="" class="border-2 bg-gray-400 text-center w-fit p-5 rounded-md ">
+
+            <div class="flex flex-col">
+                <div class="flex justify-between">
+                    <label for="length">length</label>
+                    <input type="number" name="" id="length" class="bg-gray-300 w-1/3">
+                </div>
+                <div class="flex justify-between">
+                    <label for="length">uppercase</label>
+                    <input type="checkbox" name="" id="uper">
+                </div>
+                <div class="flex justify-between">
+                    <label for="length">lowercase</label>
+                    <input type="checkbox" name="" id="lower">
+                </div>
+                <div class="flex justify-between">
+                    <label for="length">number</label>
+                    <input type="checkbox" name="" id="num">
+                </div>
+                <div class="flex justify-between">
+                    <label for="length">symbol</label>
+                    <input type="checkbox" name="" id="symbol">
+                </div>
+
+
             </div>
-            <div class="flex justify-between">
-                 <label for="length">uppercase</label>
-                <input type="checkbox" name="" id="uper">
-            </div>
-            <div class="flex justify-between"> 
-                <label for="length">lowercase</label>
-                <input type="checkbox" name="" id="lower">
-            </div>
-            <div class="flex justify-between"> 
-                <label for="length">number</label>
-                <input type="checkbox" name="" id="num">
-            </div>
-            <div class="flex justify-between"> 
-                <label for="length">symbol</label>
-                <input type="checkbox" name="" id="symbol">
-            </div>
-        </div>
+        </form>
     </div>
 
     <script src="./index.js"> </script>

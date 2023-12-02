@@ -1,18 +1,18 @@
 
-const btn = document.getElementById("btn");
+const btn = document.getElementById("button");
 const randompassword = () =>{
     let big = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let sm = "abcdefghijklmnopqrstuvwxyz"
     let num = "1234567890";
     let sig = "!@#$%^&*";
-    
+    let res;
     for(let i=0;i<8;i++){
-        let res  = sm[[Math.floor(Math.random()*25)]]+big[Math.floor(Math.random()*25)]+num[Math.floor(Math.random()*9)]+sig[Math.floor(Math.random()*7)];
+      res = big[Math.floor(Math.random()*25)].concat(sm[Math.floor(Math.random()*25)]).concat(num[Math.floor(Math.random()*9)]).concat(sig[Math.floor(Math.random()*7)])  
     }
     return res;
 };
-function printer(){
-    document.getElementById("pass").value = randompassword();
-}
 
-btn.addEventListener("click",printer());
+
+button.addEventListener("click",function printer(){
+    document.getElementById("pass").value = randompassword();
+});
