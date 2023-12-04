@@ -7,43 +7,43 @@ console.log(document.querySelector("#uper").checked);
 
 const size = 6;
 
-const upperCase = "";
-const lowerCase = "";
-const number = "";
-const symbol = "";
+const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowerCase ="abcdefghijklmnopqrstuvwxyz";
+const number = "0123456789";
+const symbol = "@#$%^&*()_-+={}[].,<>";
 
 
-function up() {
-  let upperCase;
-  return upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-}
-function low() {
-  let lowerCase;
-  return lowerCase = "abcdefghijklmnopqrstuvwxyz"
-}
-function nu() {
-  let number;
-  return number = "0123456789"
-}
-function sy() {
-  let symbol;
-  return symbol = "@#$%^&*()_-+={}[].,<>"
-}
+// function up() {
+//   let upperCase;
+//   return upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+// }
+// function low() {
+//   let lowerCase;
+//   return lowerCase = "abcdefghijklmnopqrstuvwxyz"
+// }
+// function nu() {
+//   let number;
+//   return number = "0123456789"
+// }
+// function sy() {
+//   let symbol;
+//   return symbol = "@#$%^&*()_-+={}[].,<>"
+// }
 
 
 
 
-const uper = document.querySelector("#uper");
-uper.addEventListener("click",upperCase = up());
+// const uper = document.querySelector("#uper");
+// uper.addEventListener("click",upperCase = up());
 
-const lower = document.querySelector("#lower");
-lower.addEventListener("click",lowerCase = low());
+// const lower = document.querySelector("#lower");
+// lower.addEventListener("click",lowerCase = low());
 
-const num = document.querySelector("#num");
-num.addEventListener("click",number = num());
+// const num = document.querySelector("#num");
+// num.addEventListener("click",number = num());
 
-const sym = document.querySelector("#symbol");
-sym.addEventListener("click",symbol = sy());
+// const sym = document.querySelector("#symbol");
+// sym.addEventListener("click",symbol = sy());
 
 
 const allChars = upperCase + lowerCase + number + symbol;
