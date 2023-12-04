@@ -1,45 +1,48 @@
-// const n = document.querySelector("input[type=number");
+ const n = document.querySelector("#length");
 
-function bigchecked() {
-  let upperCase;
-  if (document.querySelector("#uper").checked ) {
-    return upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  }
-  return "";
-}
+// function bigchecked() {
+//   let upperCase;
+//   if (document.querySelector("#uper").checked ) {
+//     return upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//   }
+//   return "";
+// }
 
-function smchecked() {
-  let lowerCase;
-  if (document.querySelector("#lower").checked) {
-    return lowerCase = "abcdefghijklmnopqrstuvwxyz";
-  }
-  return "";
-}
+// function smchecked() {
+//   let lowerCase;
+//   if (document.querySelector("#lower").checked) {
+//     return lowerCase = "abcdefghijklmnopqrstuvwxyz";
+//   }
+//   return "";
+// }
 
-function numchecked() {
-  let number;
-  if (document.querySelector("#num").checked ) {
-    return number = "0123456789";
-  }
-  return "";
-}
-function sigchecked() {
-  let symbol;
-  if (document.querySelector("#symbol").checked ) {
-    return symbol = "@#$%^&*()_-+={}[].,<>";
-  }
-  return "";
-}
+// function numchecked() {
+//   let number;
+//   if (document.querySelector("#num").checked ) {
+//     return number = "0123456789";
+//   }
+//   return "";
+// }
+// function sigchecked() {
+//   let symbol;
+//   if (document.querySelector("#symbol").checked ) {
+//     return symbol = "@#$%^&*()_-+={}[].,<>";
+//   }
+//   return "";
+// }
  
+const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+const number = "0123456789";
+const symbol = "@#$%^&*()_-+={}[].,<>";
 
 
+const size = 6;
 
-const size = 8;
-
-const upperCase = bigchecked();
-const lowerCase = smchecked();
-const number = numchecked();
-const symbol = sigchecked();
+// const upperCase = bigchecked();
+// const lowerCase = smchecked();
+// const number = numchecked();
+// const symbol = sigchecked();
 
 const allChars =  upperCase + lowerCase + number + symbol;
 
@@ -63,4 +66,3 @@ const btn = document.getElementById("button");
 btn.addEventListener("click", function printer() {
   document.getElementById("pass").value = createPassword();
 });
-
