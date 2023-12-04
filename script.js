@@ -1,11 +1,4 @@
-// const n = document.querySelector("#length");
 
-
-
-
-console.log(document.querySelector("#uper").checked);
-
-const size = 6;
 
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerCase ="abcdefghijklmnopqrstuvwxyz";
@@ -13,58 +6,38 @@ const number = "0123456789";
 const symbol = "@#$%^&*()_-+={}[].,<>";
 
 
-// function up() {
-//   let upperCase;
-//   return upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-// }
-// function low() {
-//   let lowerCase;
-//   return lowerCase = "abcdefghijklmnopqrstuvwxyz"
-// }
-// function nu() {
-//   let number;
-//   return number = "0123456789"
-// }
-// function sy() {
-//   let symbol;
-//   return symbol = "@#$%^&*()_-+={}[].,<>"
-// }
 
-
-
-
-// const uper = document.querySelector("#uper");
-// uper.addEventListener("click",upperCase = up());
-
-// const lower = document.querySelector("#lower");
-// lower.addEventListener("click",lowerCase = low());
-
-// const num = document.querySelector("#num");
-// num.addEventListener("click",number = num());
-
-// const sym = document.querySelector("#symbol");
-// sym.addEventListener("click",symbol = sy());
-
-
-const allChars = upperCase + lowerCase + number + symbol;
-console.log(allChars);
-
-function createPassword() {
-  let Password = "";
-  Password += upperCase[Math.floor(Math.random() * upperCase.length)];
-  Password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
-  Password += number[Math.floor(Math.random() * number.length)];
-  Password += symbol[Math.floor(Math.random() * symbol.length)];
-
-  while (size > Password.length) {
-    Password += allChars[Math.floor(Math.random() * allChars.length)];
-  }
-
-  return Password;
-}
+const lengthInput = document.querySelector("#length");
+const upperCheckbox = document.querySelector("#uper");
+const lowerCheckbox = document.querySelector("#lower");
+const numCheckbox = document.querySelector("#num");
+const symbolCheckbox = document.querySelector("#symbol");
 
 const btn = document.getElementById("button");
+const passwordInput = document.getElementById("pass");
 
-btn.addEventListener("click", function printer() {
-  document.getElementById("pass").value = createPassword();
+btn.addEventListener("click", function () {
+  const size = lengthInput.value;
+  let selectedChars = "";
+
+  if (upperCheckbox.checked) selectedChars += upperCase;
+  if (lowerCheckbox.checked) selectedChars += lowerCase;
+  if (numCheckbox.checked) selectedChars += number;
+  if (symbolCheckbox.checked) selectedChars += symbol;
+
+  if (!selectedChars) {
+    alert("Please select at least one character type.");
+    return;
+  }
+
+  passwordInput.value = createPassword(size, selectedChars);
+  
 });
+
+function createPassword(size, chars) {
+  let password = "";
+  for (let i = 0; i < size; i++) {
+    password += chars[Math.floor(Math.random() * chars.length)];
+  }
+  return password;
+}
